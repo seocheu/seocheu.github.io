@@ -105,7 +105,7 @@ function selectType(obj) {
     g.type3D_2.style.display = "none";
     g.type3D_3.style.display = "";
     g.type3D_4.style.display = "none";
-  }  else if (obj == 7) {
+  }  else {
     g.type2D_1.style.display = "none";
     g.type2D_2.style.display = "none";
     g.type2D_3.style.display = "none";
@@ -135,7 +135,7 @@ function selectType(obj) {
  <option value="6">PLM</option>
  <option value="7">랜더러</option>
 </select>
-<select name="video" style="display: none;" onChange="selectType(this.options[this.selectedIndex].value);">
+<select name="video" style="display: none;">
  <option value=" ">Avid Media Composer</option>
  <option value=" ">AviUtl</option>
  <option value=" ">에디우스</option>
@@ -157,7 +157,7 @@ function selectType(obj) {
  <option value=" ">Shotcut</option>
  <option value=" ">Lightworks</option>
 </select>
-<select name="effect" style="display: none;" onChange="selectType(this.options[this.selectedIndex].value);">
+<select name="effect" style="display: none;">
  <option value=" ">Nuke</option>
  <option value=" ">어도비 애프터 이펙트</option>
  <option value=" ">Motion</option>
