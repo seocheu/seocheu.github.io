@@ -1,0 +1,285 @@
+<!DOCTYPE html> <!-- graphicTool.html -->
+<html lang="ko">
+<head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script language = "javascript"> 
+function selectDimension(obj) {
+  g = document.forms.graphicTools;
+  if(obj == 1) {
+    g.twoD.style.display = "";
+    g.threeD.style.display = "none";
+    g.video.style.display = "none";
+    g.effect.style.display = "none";
+    g.type2D_1.style.display = "";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else if(obj == 2) {
+    g.twoD.style.display = "none";
+    g.threeD.style.display = "";
+    g.video.style.display = "none";
+    g.effect.style.display = "none";
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else if(obj == 3) {
+    g.twoD.style.display = "none";
+    g.threeD.style.display = "none";
+    g.video.style.display = "";
+    g.effect.style.display = "none";
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else {
+    g.twoD.style.display = "none";
+    g.threeD.style.display = "none";
+    g.video.style.display = "none";
+    g.effect.style.display = "";
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  }
+}
+function selectType(obj) {
+  g = document.forms.graphicTools;
+  if(obj == 1) {
+    g.type2D_1.style.display = "";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else if (obj == 2) {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else if (obj == 3) {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  } else if (obj == 4) {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  }  else if (obj == 5) {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "none";
+  }  else if (obj == 6) {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "";
+    g.type3D_4.style.display = "none";
+  }  else {
+    g.type2D_1.style.display = "none";
+    g.type2D_2.style.display = "none";
+    g.type2D_3.style.display = "none";
+    g.type3D_1.style.display = "none";
+    g.type3D_2.style.display = "none";
+    g.type3D_3.style.display = "none";
+    g.type3D_4.style.display = "";
+  }
+}
+</script></head>
+<body>
+<form name="graphicTools">
+<select name=" " onChange="selectDimension(this.options[this.selectedIndex].value);">
+ <option value="1">2D</option>
+ <option value="2">3D</option>
+ <option value="3">영상편집</option>
+ <option value="4">특수효과 & Dl</option>
+</select><br/>
+<select name="twoD" onChange="selectType(this.options[this.selectedIndex].value);">
+ <option value="1">비트맵</option>
+ <option value="2">벡터</option>
+ <option value="3">DTP</option>
+</select>
+<select name="threeD" style="display: none;" onChange="selectType(this.options[this.selectedIndex].value);">
+ <option value="4">폴리곤</option>
+ <option value="5">CAD</option>
+ <option value="6">PLM</option>
+ <option value="7">랜더러</option>
+</select>
+<select name="video" style="display: none;" onChange="selectType(this.options[this.selectedIndex].value);">
+ <option value=" ">Avid Media Composer</option>
+ <option value=" ">AviUtl</option>
+ <option value=" ">에디우스</option>
+ <option value=" ">iMovie</option>
+ <option value=" ">무비 메이커</option>
+ <option value=" ">베가스</option>
+ <option value=" ">파워디렉터</option>
+ <option value=" ">Camtasia Studio</option>
+ <option value=" ">Final Cut Pro</option>
+ <option value=" ">프리미어 프로</option>
+ <option value=" ">프리미어 러쉬</option>
+ <option value=" ">Davinci Resolve</option>
+ <option value=" ">키네마스터</option>
+ <option value=" ">뱁믹스</option>
+ <option value=" ">VivaVideo</option>
+ <option value=" ">HitFilm</option>
+ <option value=" ">소프트이미지</option>
+ <option value=" ">소니 카탈리스트</option>
+ <option value=" ">Shotcut</option>
+ <option value=" ">Lightworks</option>
+</select>
+<select name="effect" style="display: none;" onChange="selectType(this.options[this.selectedIndex].value);">
+ <option value=" ">Nuke</option>
+ <option value=" ">어도비 애프터 이펙트</option>
+ <option value=" ">Motion</option>
+</select> <br/>
+<select name="type2D_1">
+<option value=" ">Artecture Draw, Sketch, Paint</option>
+<option value=" ">AzPainter2</option>
+<option value=" ">Black Ink</option>
+<option value=" ">Dr. HALO</option>
+<option value=" ">에지</option>
+<option value=" ">Expresii</option>
+<option value=" ">GIMP</option>
+<option value=" ">Sketchable</option>
+<option value=" ">Krita</option>
+<option value=" ">Leonardo</option>
+<option value=" ">mdiapp</option>
+<option value=" ">MyPaint</option>
+<option value=" ">Paint.NET</option>
+<option value=" ">PaintTool SAI</option>
+<option value=" ">Pixia</option>
+<option value=" ">Spine tool</option>
+<option value=" ">그림판</option>
+<option value=" ">디럭스 페인트</option>
+<option value=" ">스무스 드로우</option>
+<option value=" ">Autodesk Sketchbook</option>
+<option value=" ">아트레이지</option>
+<option value=" ">아트위버</option>
+<option value=" ">EzPhoto</option>
+<option value=" ">어도비 포토샵</option>
+<option value=" ">오픈캔버스</option>
+<option value=" ">일러스트 스튜디오</option>
+<option value=" ">콜러페인트</option>
+<option value=" ">코믹 스튜디오</option>
+<option value=" ">클립 스튜디오</option>
+<option value=" ">파이어알파카</option>
+<option value=" ">메디방페인트</option>
+<option value=" ">페이즈원 캡처원프로</option>
+<option value=" ">페인터</option>
+<option value=" ">페인트샵</option>
+<option value=" ">페인트스톰 스튜디오</option>
+<option value=" ">포토샵 라이트룸</option>
+<option value=" ">프레시 페인트</option>
+<option value=" ">픽셀메이터</option>
+<option value=" ">픽픽</option>
+<option value=" ">하늘</option>
+<option value=" ">훠닐 스타일픽스</option>
+<option value=" ">ibisPaint X</option>
+</select>
+<select name="type2D_2" style="display: none;">
+<option value=" ">Affinity Designer</option>
+<option value=" ">Corel DRAW</option>
+<option value=" ">CorelTRACE</option>
+<option value=" ">Inkscape</option>
+<option value=" ">Microsoft Visio</option>
+<option value=" ">어도비 애니메이트</option>
+<option value=" ">툰붐 하모니</option>
+<option value=" ">어도비 일러스트레이터</option>
+<option value=" ">클립 스튜디오</option>
+<option value=" ">Sketch</option>
+<option value=" ">ibisPaint X</option>
+</select>
+<select name="type2D_3" style="display: none;">
+<option value=" ">Adobe Acrobat</option>
+<option value=" ">Microsoft Publisher</option>
+<option value=" ">QuarkXPress</option>
+<option value=" ">Scribus</option>
+<option value=" ">Sigil</option>
+<option value=" ">인디자인</option>
+</select>
+<select name="type3D_1" style="display: none;">
+<option value=" ">Alias</option>
+<option value=" ">3ds Max</option>
+<option value=" ">Mudbox</option>
+<option value=" ">Autodesk Maya</option>
+<option value=" ">Blender</option>
+<option value=" ">Cinema 4D(BodyPaint 3D)</option>
+<option value=" ">Houdini</option>
+<option value=" ">LightWave 3D</option>
+<option value=" ">Metasequoia</option>
+<option value=" ">MilkShape 3D</option>
+<option value=" ">Mine-imator</option>
+<option value=" ">MODO</option>
+<option value=" ">SculptGL</option>
+<option value=" ">Sculptris</option>
+<option value=" ">SketchUp</option>
+<option value=" ">Source Filmmaker</option>
+<option value=" ">substance painter</option>
+<option value=" ">VUE</option>
+<option value=" ">ZBrush</option>
+<option value=" ">Zmodeler</option>
+<option value=" ">포즈 스튜디오</option>
+</select>
+<select name="type3D_2" style="display: none;">
+<option value=" ">Alias</option>
+<option value=" ">ARCHICAD</option>
+<option value=" ">AutoCAD</option>
+<option value=" ">CATIA</option>
+<option value=" ">CREO</option>
+<option value=" ">FreeCAD</option>
+<option value=" ">Fusion 360</option>
+<option value=" ">Inventor</option>
+<option value=" ">NX</option>
+<option value=" ">OpenSCAD</option>
+<option value=" ">Rhino</option>
+<option value=" ">Solid Edge</option>
+<option value=" ">SolidWorks</option>
+<option value=" ">Tinkercad</option>
+</select>
+<select name="type3D_3" style="display: none;">
+<option value=" ">CATIA</option>
+<option value=" ">CREO</option>
+<option value=" ">Inventor</option>
+<option value=" ">NX</option>
+<option value=" ">Solid Edge</option>
+<option value=" ">SolidWorks</option>
+</select>
+<select name="type3D_4" style="display: none;">
+<option value=" ">Arnold</option>
+<option value=" ">Corona Renderer</option>
+<option value=" ">Mental Ray</option>
+<option value=" ">V-Ray</option>
+<option value=" ">Lumion</option>
+</select>
+</form>
+</body></html>
