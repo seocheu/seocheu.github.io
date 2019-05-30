@@ -2,6 +2,9 @@
 <html><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <style> *{ background-color:#E1DCD9; box-sizing:border-box; padding:0px; margin:0px;}
+ header {background-color:#8F8681;border:1px solid gray; margin:5px; padding:8px; width:auto; height:60px; }
+  header a p{background-color:#8F8681; color:white;}
+  header a:link {text-decoration:none;}
  .row::after{ content:""; clear:both; display:table; }
  [class*="col-"] {float:left; padding:10px;}
  .menu a:link {color:#32435F; text-decoration:none;}
@@ -16,25 +19,15 @@
   .col-7 {width: 58.33%;} .col-8 {width: 66.66%;} .col-9 {width: 75%;}
   .col-10 {width: 83.33%;} .col-11 {width: 91.66%;} .col-12 {width: 100%;}
 }
-table, thead, tbody, tfoot, tr, th, td {
-  background-color:white; border: 2px solid black;  border-collapse: collapse;text-align: center;
-  width:500px; height:50px;
-}.time { background-color:#b5b5b5; }
-.subject1 { background-color:#7f00ff; } .subject2 { background-color:#ffa500; }
-.subject3 { background-color:#7fff00; } .subject4 { background-color:#87CEEB; }
-.subject5 { background-color:#FF007F; } .subject6 { background-color:#FFFF00; }
-.subject7 { background-color:#964b00; } .subject8 { background-color:#adff2f; }
-.subject9 { background-color:aqua; } .subject10 { background-color:beige; }
-th,td{ width:65px;}
 </style><title>포트폴리오</title></head>
 <body>
-<header class=""></header>
+<header><a href="http://seocheu.github.io/ePortfolio/main1.html"><p>심성민's ePortfolio</p></a></header>
 <div class="row"></div>
 <div><nav class="col-3 menu"><ul>
-  <a href="http://seocheu.github.io/ePortfolio/main1.html"><li>나는?</li></a>
+  <li id="selected">나는?</li>
   <a href="http://seocheu.github.io/ePortfolio/main2.html"><li>학력</li></a>
   <a href="http://seocheu.github.io/ePortfolio/main3.html"><li>경력</li></a>
-  <li id="selected">수업 수강 내역</li>
+  <a href="http://seocheu.github.io/ePortfolio/main4.html"><li>수업 수강 내역</li></a>
   <a href="http://seocheu.github.io/ePortfolio/main5.html"><li>과목별 프로젝트</li></a>
   <a href="http://seocheu.github.io/ePortfolio/main6.html"><li>공모전</li></a>
   <a href="http://seocheu.github.io/ePortfolio/main7.html"><li>봉사활동</li></a>
