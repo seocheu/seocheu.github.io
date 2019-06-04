@@ -25,4 +25,4 @@ table, thead, tbody, tfoot, tr, th, td { background-color:white;
 .subject7 { background-color:#964b00; } .subject8 { background-color:#adff2f; }
 .subject9 { background-color:aqua; } .subject10 { background-color:beige; }
 th,td{ width:85px;}
-img {height:auto;}
+img {width:100%; height:auto;}
