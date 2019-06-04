@@ -2,7 +2,7 @@
 header {background-color:#8F8681;border:1px solid gray; margin:5px; padding:8px; width:auto; height:60px; }
 header a p{background-color:#8F8681; color:white; font-size:30px;}
 header a:link {text-decoration:none;}
-footer {background-color:#8F8681;border:1px solid gray; margin:5px; padding:8px; width:auto; height:30px; }
+.footer {background-color:#8F8681;border:1px solid gray; margin:5px; padding:8px; width:auto; height:30px; }
 .row::after{ content:""; clear:both; display:table; }
 [class*="col-"] {float:left; padding:10px;}
 .menu a:link {color:#32435F; text-decoration:none;}
