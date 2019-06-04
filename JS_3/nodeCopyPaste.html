@@ -1,5 +1,5 @@
 
-<!DOCTYPE html> <!-- nodePaste.html -->
+<!DOCTYPE html> <!-- nodeCopyPaste.html -->
 <html lang="ko">
 <head><meta charset="utf-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://seocheu.github.io/JS_1/sample.css"/>
 <script src="https://seocheu.github.io/JS_1/sample.js"></script>
 <script>
- function fnNodePaste() {
+ function fnNodeCopyPaste() {
  var accessTag = document.getElementById("form_id1");
  var copyNode = accessTag.cloneNode(true);
  console.log(copyNode);
@@ -25,6 +25,6 @@
    <input id="button_id1" type="button" name="user_id" value="입력"/><br/>
     빈칸에 검색어를 넣고 입력해 주세요.
   </form>
-  <form><input type="button" onclick="fnNodePaste();" value="변경실행"/></form>
+  <form><input type="button" onclick="fnNodeCopyPaste();" value="변경실행"/></form>
  </section>
 </body></html>
